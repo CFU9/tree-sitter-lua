@@ -84,19 +84,21 @@ module.exports = grammar({
 
     local_variable_declaration: $ => seq(
       'local',
-      alias($._local_variable_declarator, $.variable_declarator),
+      $.local_variable_declarator,
       optional(seq('=', commaSeq($._expression)))
     ),
 
     _variable_declarator: $ => choice(
       $.identifier,
-      seq($._prefix, '[', $._expression, ']'),
+      $.table_index,
       $.field_expression
     ),
+    
+    table_index: $ => seq($._prefix, '[', $._expression, ']'),
 
     field_expression: $ => seq($._prefix, '.', alias($.identifier, $.property_identifier)),
 
-    _local_variable_declarator: $ => commaSeq($.identifier),
+    local_variable_declarator: $ => commaSeq($.identifier),
 
     // Statements: Control statements
     do_statement: $ => seq(

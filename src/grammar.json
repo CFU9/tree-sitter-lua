@@ -245,13 +245,8 @@
           "value": "local"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_local_variable_declarator"
-          },
-          "named": true,
-          "value": "variable_declarator"
+          "type": "SYMBOL",
+          "name": "local_variable_declarator"
         },
         {
           "type": "CHOICE",
@@ -305,29 +300,33 @@
           "name": "identifier"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_prefix"
-            },
-            {
-              "type": "STRING",
-              "value": "["
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_expression"
-            },
-            {
-              "type": "STRING",
-              "value": "]"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "table_index"
         },
         {
           "type": "SYMBOL",
           "name": "field_expression"
+        }
+      ]
+    },
+    "table_index": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_prefix"
+        },
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "STRING",
+          "value": "]"
         }
       ]
     },
@@ -353,7 +352,7 @@
         }
       ]
     },
-    "_local_variable_declarator": {
+    "local_variable_declarator": {
       "type": "SEQ",
       "members": [
         {
