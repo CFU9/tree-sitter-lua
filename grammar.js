@@ -178,10 +178,14 @@ module.exports = grammar({
       optional(seq(',', $._expression))
     ),
 
+    loop_variables: $ => commaSeq($.identifier),
+
+    iterator_expressions: $ => commaSeq($._expression),
+
     _in_loop_expression: $ => seq(
-      commaSeq($.identifier),
+      $.loop_variables,
       'in',
-      commaSeq($._expression),
+      $.iterator_expressions,
     ),
 
     // Statements: Simple statements
