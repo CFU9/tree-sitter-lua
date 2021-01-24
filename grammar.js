@@ -20,7 +20,7 @@ module.exports = grammar({
   name: 'lua',
 
   extras: $ => [
-    $.comment,
+    $._comment,
     /[\s\n]/
   ],
 
@@ -36,7 +36,7 @@ module.exports = grammar({
   ],
 
   externals: $ => [
-    $.comment,
+    $._comment,
     $.string
   ],
 
