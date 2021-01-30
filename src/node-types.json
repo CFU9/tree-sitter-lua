@@ -36,10 +36,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -115,10 +111,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -191,10 +183,6 @@
         },
         {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "next",
           "named": true
         },
         {
@@ -502,10 +490,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -581,10 +565,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -657,10 +637,6 @@
         },
         {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "next",
           "named": true
         },
         {
@@ -992,10 +968,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -1306,10 +1278,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -1487,10 +1455,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -1586,10 +1550,6 @@
         },
         {
           "type": "loop_variables",
-          "named": true
-        },
-        {
-          "type": "next",
           "named": true
         },
         {
@@ -1860,10 +1820,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -1954,10 +1910,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -2033,10 +1985,6 @@
           "named": true
         },
         {
-          "type": "next",
-          "named": true
-        },
-        {
           "type": "nil",
           "named": true
         },
@@ -2109,10 +2057,6 @@
         },
         {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "next",
           "named": true
         },
         {
@@ -2434,10 +2378,6 @@
   },
   {
     "type": "method",
-    "named": true
-  },
-  {
-    "type": "next",
     "named": true
   },
   {
