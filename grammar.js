@@ -284,11 +284,8 @@ module.exports = grammar({
 
     self: $ => 'self',
 
-    global_variable: $ => choice('_G', '_VERSION'),
-
     _prefix: $ => choice(
       $.self,
-      $.global_variable,
       $._variable_declarator,
       prec(-1, alias($.function_call_statement, $.function_call)),
       seq('(', $._expression, ')')
