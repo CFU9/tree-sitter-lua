@@ -241,14 +241,18 @@ module.exports = grammar({
       field("object", $.identifier),
       repeat(seq('.', alias($.identifier, $.property_identifier))),
     ),
-
+    
     parameters: $ => seq(
       '(',
-      optional(seq(
-        choice($.self, $.spread, $.identifier),
-        repeat(seq(',', $.identifier)),
-        optional(seq(',', $.spread))
-      )),
+      optional(
+      	choice(
+      		seq(
+        		commaSeq($.identifier),
+        		optional(seq(',', $.spread))
+      			),
+      		 $.spread
+      		)
+      	),
       ')'
     ),
 
@@ -282,10 +286,7 @@ module.exports = grammar({
     // Expressions: Common
     spread: $ => '...',
 
-    self: $ => 'self',
-
     _prefix: $ => choice(
-      $.self,
       $._variable_declarator,
       prec(-1, alias($.function_call_statement, $.function_call)),
       seq('(', $._expression, ')')
@@ -317,7 +318,7 @@ module.exports = grammar({
     )),
 
     _field_sep: $ => choice(',', ';'),
-
+	
     // Expressions: Operation expressions
     binary_operation: $ => choice(
       ...[
